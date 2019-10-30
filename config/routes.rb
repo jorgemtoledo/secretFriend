@@ -6,8 +6,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
   resources :campaigns, except: [:new] do
-    post 'raffle', on: :
-    # Exemplo raffle acima: campaigns/:id/raffle
+    post 'raffle', on: :member
     # post 'raffle', on: :collection
   end
   get 'members/:token/opened', to: 'members#opened'
